@@ -21,10 +21,8 @@ public class Ejercicio5 {
         {
           System.out.println("El Anio ingresado NO es Bisiesto "+anio);
          }
-
-
-
     }
+
 
 
 
