@@ -14,7 +14,7 @@ public class Ejercicio5 {
         if (anio % 4 == 0 && anio % 100 != 0) {
             JOptionPane.showMessageDialog(null, "El Anio ingresado es Bisiesto " + anio);
         } else {
-            JOptionPane.showMessageDialog(null, "El Anio ingresado NO es Bisiesto " + anio);
+            JOptionPane.showConfirmDialog(null, "El Anio ingresado NO es Bisiesto " + anio);
         }
     }
 }
