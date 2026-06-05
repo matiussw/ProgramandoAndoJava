@@ -1,28 +1,22 @@
 package Guia2;
-
 import javax.swing.JOptionPane;
 
 public class Guia2Main {
     public void Guia2() {
-        JOptionPane.showMessageDialog(null, "Bienvenido a la Guia 2 \n " +
-                "Aqui Aprenderas a usar Try catch");
 
-        int numeroA = ingresarEnteros();
-        int numeroB = ingresarEnteros();
-        int Suma = numeroA + numeroB;
-        JOptionPane.showMessageDialog(null, "La suma es " + Suma);
+        int opcion= Integer.parseInt(JOptionPane.showInputDialog(null, "Ingresando a los Ejercicios De la guia 2 \n"+
+       "1.Ejercicios Try Catchn\n"+
+       "2.Ingresando A Ejercicios Con Base De Datos"));
+
+
+       if (opcion==1){
+        Ejercicio1 Ejercicio = new Ejercicio1();
+        Ejercicio.Division();
+       }
+       if (opcion==2){
+        MainPersistenciaData BaseDatos =new MainPersistenciaData();
+        BaseDatos.MenuBaseDeDatos();
+       }
+      
     }
-
-    public int ingresarEnteros() {
-        int Numero = 0;
-        while (true) {
-            try {
-                Numero = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un numero para sumar Numero"));
-                return Numero;
-            } catch (Exception e) {
-                JOptionPane.showMessageDialog(null,"Ingrese un Numero Entero "+e);
-            }
-        }
-    }
-
 }
