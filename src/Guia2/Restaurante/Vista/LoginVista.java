@@ -19,6 +19,12 @@ public class LoginVista {
         int opcion = JOptionPane.showConfirmDialog(null, campos, "Iniciar Sesion",
                 JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
 
+        if (opcion != JOptionPane.OK_OPTION) {
+
+            JOptionPane.showMessageDialog(null, "El Usurio cancelo el inicio de sesion");
+            return;
+        }
+
         String Usuario = campoUsuario.getText().trim();
         String password = new String(campoClave.getPassword());
 
@@ -30,7 +36,8 @@ public class LoginVista {
             JOptionPane.showMessageDialog(null, "Bienvenido " + Usuario + "Su Rol " + tipoUser);
         } else {
             JOptionPane.showMessageDialog(null, "Bienvenido " + Usuario + "Su Rol " + tipoUser);
-
+            VistaMenu menuVista =new VistaMenu();
+            menuVista.mostrarMenu(tipoUser);
         }
 
     }

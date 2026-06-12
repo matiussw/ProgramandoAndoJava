@@ -22,8 +22,8 @@ public class MainPersistenciaData {
         if (opcion == 2) {
         CrearTablas crear = new CrearTablas();
         crear.crearTablaUsers();
-        InsertarData insertarData =new InsertarData();
-        insertarData.insertarData();
+       // InsertarData insertarData =new InsertarData();
+        //insertarData.insertarData();
         LoginVista loginVista =new LoginVista();
         loginVista.mostrarLogin();
             
